@@ -45,6 +45,13 @@ server {
 }
 
 server {
+    server_name uhlbriccsapp02;
+    listen 443;
+
+    return 301 https://uhlbriccsapp02.xuhl-tr.nhs.uk$request_uri;
+}
+
+server {
     listen 80 default_server;
 
     server_name _;
